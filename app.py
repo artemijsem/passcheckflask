@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # Set the correct password (in a real app, store this securely, e.g., hashed in a database)
 CORRECT_PASSWORD = "secure123"
-CORS(app, resources={r"/check-password": {"origins": "https://ubiquitous-twilight-265250.netlify.app"}})
+CORS(app)
 
 @app.route('/check-password', methods=['POST'])
 def check_password():
